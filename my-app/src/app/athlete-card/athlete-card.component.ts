@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Athlete } from './athlete.model';
 
 @Component({
   selector: 'app-athlete-card',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./athlete-card.component.css']
 })
 export class AthleteCardComponent {
-
+  @Input() athleteArray: Athlete[] = [];
 }

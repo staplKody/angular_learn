@@ -1,1 +1,11 @@
-<p>athlete-card works!</p>
+
+
+<div *ngFor="let athlete of athleteArray" class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ athlete.firstName + ' ' + athlete.lastName }}</h5>
+      <p class="card-text">{{ 'ELO: ' + athlete.elo }}</p>
+      <p class="card-text">{{ 'LAST ACTIVE: ' + athlete.dayOfMatch }}</p>
+      <!-- Add other properties as needed -->
+    </div>
+  </div>
+  
