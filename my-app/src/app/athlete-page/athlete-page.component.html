@@ -1,2 +1,11 @@
-<app-athlete-card [athleteArray]="athleteArray"></app-athlete-card>
-
+<div *ngFor="let weightClass of weightClasses">
+    <h2>{{ weightClass.arm }} Arm - {{ weightClass.weight }} lbs</h2>
+    <ul>
+      <li *ngFor="let puller of weightClass.pullers">
+        <p>{{ puller.firstName }} {{ puller.lastName }}</p>
+        <p>Elo: {{ puller.elo }}</p>
+        <p>Day of Match: {{ puller.dayOfMatch }}</p>
+      </li>
+    </ul>
+  </div>
+  
