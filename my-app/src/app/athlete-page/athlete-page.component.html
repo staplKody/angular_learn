@@ -1,4 +1,5 @@
-<div *ngFor="let weightClass of weightClasses">
+<div *ngFor="let weightClass of filteredWeightClasses">
+  <ng-container *ngIf="weightClass.pullers.length > 0">
     <h2>{{ weightClass.arm }} Arm - {{ weightClass.weight }} lbs</h2>
     <ul>
       <li *ngFor="let puller of weightClass.pullers">
@@ -7,5 +8,6 @@
         <p>Day of Match: {{ puller.dayOfMatch }}</p>
       </li>
     </ul>
+    </ng-container>
   </div>
   
